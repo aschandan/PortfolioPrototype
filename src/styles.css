@@ -81,7 +81,7 @@ p, a, ul, li{
                         "sidebar content"
                         "sidebar footer";
   grid-template-rows:    auto 1fr auto;
-  grid-template-columns: 1fr 8fr 1fr auto;
+  grid-template-columns: 1.3fr 10fr 1fr auto;
   min-height: 100%;
   row-gap: 35px;
   }
@@ -142,6 +142,7 @@ p, a, ul, li{
   display: block;
   width: 0;
   height: 1px;
+  margin-top: 2px;
   transition: 0 0.4s, var(--background-color) 0.4s;
   position: absolute;
   background-color: var(--selectioncolorbar);
@@ -149,7 +150,7 @@ p, a, ul, li{
 
 .sidebar a:hover::after {
   background-color: var(--headerfont);  
-  width: 65%;
+  width: 45%;
   outline: none;
   transition: width 0.4s;
 }
@@ -162,26 +163,6 @@ p, a, ul, li{
   border: #3c2d38;
 }
 
-.sidebar .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-.openbtn {
-  font-size: 20px;
-  cursor: pointer;
-  background-color: #111;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-}
-
-.openbtn:hover {
-  background-color: #444;
-}
 
 
 /* ---- end of sidebar ---- */
@@ -296,16 +277,53 @@ figcaption {
   grid-area:footer;
   background:rgb(116, 116, 116);
   grid-column: 2 / span 4;
-  width: 100%;
+  width: 99.69%;
   bottom: 0;
+  margin-left:.8rem;
+  margin-bottom: -.8rem;
   height: 3rem; 
   display:flex;
  }
 
- 
+.footertext{
+padding-left:1rem;
+}
+
+ @media screen and (max-width: 1500px) {
+  .sidebar {
+    width: 19%;
+    border-bottom: .2rem solid var(--headerfont);
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .grid {
+    display:grid;   
+    grid-template-areas:  "sidebar header"
+                          "sidebar content"
+                          "sidebar footer";
+    grid-template-rows:    auto 1fr auto;
+    grid-template-columns: 2fr 8fr 1fr auto;
+    min-height: 100%;
+    row-gap: 35px;
+    }
+
+ }
+
 /* responsiveness for media devices */
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-height: 650px){
+  
+.sidebar ul{
+  padding-right:1rem;
+  padding-left:1.5rem;
+  padding-top:40%;
+  list-style-type: none; 
+}
+
+}
+
+@media screen and (max-width: 900px){
   .sidebar {
     width: 100%;
     height: auto;
@@ -384,7 +402,7 @@ figcaption {
 
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 850px) {
  
   .content{
     grid-area:content;
