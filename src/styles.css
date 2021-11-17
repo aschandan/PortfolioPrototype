@@ -313,14 +313,44 @@ figcaption {
     border-right: none;
     padding-left: 1rem;
     padding-right: 1rem;
+
   }
 
   .sidebar ul{
     padding-top:0;
   }
 
-  .sidebar ul li, .sidebar a{
-    display: inline;
+  .sidebar a{
+  padding:.2rem;
+  }
+  .sidebar a:hover {
+    background-color:none;
+    transition: ease 0s;
+  }
+  
+  .sidebar a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    transition: 0 0s, none 0s;
+    position: absolute;
+    background-color: none;
+  }
+  
+  .sidebar a:hover::after {
+    background-color: none;  
+    width: 0%;
+    outline: none;
+    transition: width 0.4s;
+  }
+  
+  .selected {
+    content: '';
+    left: 0;
+    outline: 1px solid;
+    background-color: var(--selectioncolorbar);
+    border: #3c2d38;
   }
 
 
@@ -340,7 +370,7 @@ figcaption {
       padding-right:2rem;
     }
     .header{
-      margin-top:9rem;
+      margin-top:12rem;
     }
     h1{
       margin-top:0;
