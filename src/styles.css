@@ -470,9 +470,32 @@ figure {
    }
 
 
+   @media screen and (min-height: 700px){
+    .footer{
+      grid-area:footer;
+      margin-right: 0em;
+      margin-bottom:-1rem;
+      height: 4rem; 
+      display:flex;
+      flex-shrink: 0;
+      font-size:1rem;
+     }
+    
+    .footertext, .social{
+    padding-left:.2rem;
+    display: inline;
+    }
+    
+    .social{
+      padding-left:.4rem;
+      font-size:1rem;
+    }
+  
+    }
+  
  /* responsiveness for media devices */
 
-@media screen and (max-height: 650px){
+@media screen and (max-height: 700px){
   
   .sidebar ul{
     padding-right:1rem;
@@ -480,8 +503,8 @@ figure {
     padding-top:40%;
     list-style-type: none; 
   }
-  
-  }
+
+}
   
 
 /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
@@ -490,4 +513,13 @@ figure {
     text-align: center;
     float: none;
   }
+  .footer{
+    grid-area:footer;
+    margin-right: 0em;
+    margin-bottom:-1rem;
+    height: 5rem; 
+    display:flex;
+    flex-shrink: 0;
+    font-size:1rem;
+   }
 }
