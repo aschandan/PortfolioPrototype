@@ -201,9 +201,9 @@ display:flex;
 background-color: #f1e4cb;
 border: 1px solid #f1e4cb;
 border-radius: 0.25rem;
-max-width: 95%;
 margin: 1rem;
 height: auto;
+flex-shrink: 0;
 }
 
 
@@ -293,12 +293,12 @@ figcaption {
    }
   
   .footertext, .social{
-  padding-left:1rem;
+  padding-left:2rem;
   display: inline;
   }
   
   .social{
-    padding-left:3rem;
+    padding-left:5rem;
   }
 
   
@@ -393,11 +393,19 @@ figcaption {
     .header{
       margin-top:12rem;
     }
+    
+    #pronunciation{
+      display: inline;
+    }
+  
     h1{
       margin-top:0;
-      font-size: 2.4rem;
-      
+      font-size: 1.8rem;
       padding-right:1rem;
+    }
+
+    h2{
+      font-size:1.4rem;
     }
     .footer{
       grid-column: 1 / span 4;
@@ -423,9 +431,7 @@ figcaption {
     .img{
       object-fit: scale-down;
       display: flex;
-      height: 85%;
-      width: 85%;
-      margin-left: auto;
+      max-width: 55%;
       margin-right: auto;
       border:none;
     }
@@ -435,6 +441,11 @@ figure {
   flex-direction: column;
 }
   
+figcaption {
+  align-self: flex-start;
+  text-align: left;
+}
+
     .image1 {
     grid-column: 1 / span 2;
     grid-row: 1;
@@ -456,21 +467,31 @@ figure {
   
   .image4{
     grid-column: 1;
-    grid-row: 3;
+    grid-row: 2;
     grid-area: image4;
   }
   
   .image5{
-    grid-column: 2;
-    grid-row: 3;
+    grid-column: 1;
+    grid-row: 2;
     grid-area: image5;
   }
+
+  .image6{
+    grid-column: 1;
+    grid-area: image6;
   
+  }
+
+  .image7{
+    grid-column: 1;
+    grid-area: image7;
+  }
   
    }
 
 
-   @media screen and (min-height: 700px){
+   @media screen and (max-width: 700px){
     .footer{
       grid-area:footer;
       margin-right: 0em;
