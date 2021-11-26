@@ -228,22 +228,9 @@ p, a, ul, li{
 .skills{
   grid-column: 1;
   grid-area:"cot3";
-  display:flex;
-  flex-wrap: wrap;
-  flex: 80%;
+  padding-left:6vw;
 }
 
-.products{
-  display:flex;
-  padding-top:1.5rem;
-  padding-right:1.5rem;
-  margin:auto;
-  
-}
-.general{
-  display:flex;
- 
-}
 
 .certification{
   grid-column: 2 / span 2;
@@ -426,7 +413,11 @@ figcaption {
   pointer-events: none;
   }
   
+  .skills{
+    padding-left:4vw;
+  }
   
+
   .selected {
     content: '';
     left: 0;
@@ -449,6 +440,7 @@ figcaption {
     row-gap: 10px;
     }
 
+    
     .header, .imagecontent{
       padding-left:2rem;
       padding-right:2rem;
@@ -623,8 +615,7 @@ figcaption {
     grid-area:"cot4";
   }
  
-
-   }
+}
 
 
    @media screen and (max-width: 800px){
