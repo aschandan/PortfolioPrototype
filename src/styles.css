@@ -21,9 +21,10 @@
 }
   
   html, body {
-  position: relative;
+    
   background-color: var(--bgcolor);
   min-height: 40vh;
+
   }
 /* end of body */
 
@@ -31,6 +32,7 @@
 
   h1, h2, h3, h4{
   color:var(--headerfont);
+ 
   }
 
   h1{
@@ -378,6 +380,138 @@ font-size: 1.4rem;
   .workcontent h3 {
     font-size: 1.6rem;
     }
+
+/*--------------end of work experience-----------*/
+
+/*-------------start of contact-------------*/
+
+.contactcontent{
+  grid-area:content;
+  display: grid;
+    grid-gap: 3rem;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: auto 3fr 3fr;
+    grid-template-areas:
+    "col1 col2 col3";
+    padding-left:4rem;
+    padding-bottom:.1rem;
+}
+
+#contact {
+  flex-direction: column;
+}
+  
+
+#contact figcaption {
+ 
+  text-align: left;
+}
+
+#amandeep{
+  object-fit: scale-down;
+  position: relative;
+  display: block;
+  max-width: 100%;
+  grid-area:col3;
+  border: 1px solid black;
+}
+
+
+.contactcolumn{
+  grid-area:col1;
+}
+.contactcolumn a{
+  font-family: inherit;
+
+}
+
+.contactcolumn h3{
+  font-size:2rem;
+  padding-top:1rem;
+}
+.contactcolumn ul{
+  list-style-type: "→ ";
+}
+.contactcolumn li{
+font-size: 2rem;
+padding-bottom:1rem;
+}
+
+
+/* Style inputs, select elements and textareas */
+
+.formcontainer{
+  grid-area:col2;
+}
+
+input[type=text],
+select,
+textarea {
+    padding: 12px;
+    margin-bottom: 4px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid var(--headerfont);
+    border-radius: 1px;
+    width: 40rem;
+    font-family: inherit;
+    color: var(--mainfont);
+    font-size: 1.2rem;
+    transition: all 0.2s ease 0s;
+}
+
+input[type=text]:hover,
+select:hover,
+textarea:hover {
+    color: white;
+    border-color: transparent;
+    background-color: var(--headerfont);
+}
+
+input[type=text]:focus,
+select:focus,
+textarea:focus {
+    color: white;
+    border-color: transparent;
+    background-color: var(--headerfont);
+}
+
+textarea {
+    font-family: inherit;
+    height: 320px;
+    min-height: 320px;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    resize: vertical;
+}
+
+
+/* Style the submit button */
+
+input[type=submit] {
+    background-color: transparent;
+    color: var(--headerfont);
+    width: auto;
+    border-width: 2px;
+    border-style: solid;
+    border-color: inherit;
+    margin-top: 5px;
+    margin-bottom: 3rem;
+    padding: 12px 15px 12px 25px;
+    transition: all 0.2s ease 0s;
+    cursor: pointer;
+    font-size: 1.3rem;
+    font-family: inherit;
+}
+
+input[type=submit]:hover {
+    background-color: var(--headerfont);
+    color: white;
+    border-color: transparent;
+}
+
+
 /*--------------start of footer------------*/
 
   .footer{
