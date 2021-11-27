@@ -478,7 +478,7 @@ textarea:focus {
 
 textarea {
     font-family: inherit;
-    height: 200px;
+    height: 480px;
     min-height: 120px;
     box-sizing: border-box;
     overflow: hidden;
@@ -1002,6 +1002,78 @@ textarea {
     flex-shrink: 0;
     font-size:1rem;
    }
+
+    /* contact */
+.contactcontent{
+  grid-area:content;
+  display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "item1"
+                          "item2"
+                          "item3";
+    padding-left:2rem;
+   
+}
+
+
+#amandeep{
+  object-fit: cover;
+  width:230px;
+  height:230px;
+  grid-area:item2;
+  margin-left:0;
+  margin-right:0;
+  border: 1px solid black;
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.contactcolumn{
+ grid-area:item1;
+}
+.contactcolumn h3{
+  font-size:1.5rem;
+  padding-top:1rem;
+}
+
+.contactcolumn li{
+font-size: 1.5rem;
+padding-bottom:1rem;
+}
+
+.formcontainer{
+  grid-area:item3;
+  padding-bottom:1rem;
+  grid-row: 3;
+}
+
+input[type=text],
+select,
+textarea {
+    padding: 12px;
+    margin-bottom: 4px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid var(--headerfont);
+    border-radius: 1px;
+    
+    width: 80vw;
+    font-family: inherit;
+    color: var(--mainfont);
+    font-size: 1rem;
+    transition: all 0.2s ease 0s;
+    
+}
+
+textarea {
+  font-family: inherit;
+  height: 120px;
+  box-sizing: border-box;
+  overflow: hidden;
+  resize: vertical;
+}
 
 }
 
