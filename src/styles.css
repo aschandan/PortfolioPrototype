@@ -184,6 +184,7 @@ p, a, ul, li{
   padding-left:4rem;
 }
 
+/* for about page (page2)*/
 .aboutcontent{
   grid-area:content;
   display: grid;
@@ -228,7 +229,7 @@ p, a, ul, li{
 .skills{
   grid-column: 1;
   grid-area:"cot3";
-  padding-left:6vw;
+  padding-left:4vw;
 }
 
 
@@ -240,8 +241,9 @@ p, a, ul, li{
     list-style-type: "→ ";
   }
   
+/* end of about page*/
 
-
+/*start of home page (page 1) */
 .imagecontent{
   grid-area:content;
   display: grid;
@@ -402,6 +404,7 @@ figcaption {
     border-right: none;
     padding-left: 1rem;
     padding-right: 1rem;
+    grid-row:1;
   }
 
   .sidebar ul{
@@ -431,11 +434,11 @@ figcaption {
 
   .grid {
     display:grid;   
-    grid-template-areas:  "sidebar sidebar"
-                          "header header"
-                          "content content"
-                          "footer footer";
-    grid-template-rows:    3fr auto auto auto;
+    grid-template-areas:  "sidebar"
+                          "header"
+                          "content"
+                          "footer";
+    grid-template-rows:    175px 1fr auto auto;
     grid-template-columns: 3fr auto auto auto;
     row-gap: 10px;
     }
@@ -445,17 +448,20 @@ figcaption {
       padding-left:2rem;
       padding-right:2rem;
     }
+
     .header{
-      margin-top:12rem;
+      
+      grid-row: 2;
     }
     
+  
     #pronunciation{
       display: inline;
     }
   
     h1{
       margin-top:0;
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       padding-right:1rem;
     }
 
@@ -546,18 +552,19 @@ figcaption {
   
 /* about page */
 
+
   .aboutcontent{
     grid-area:content;
     display: grid;
       grid-gap: 2rem;
-      grid-template-columns: 3fr 2fr 1fr auto; 
+      grid-template-columns: 3fr 2fr 2fr auto; 
       grid-auto-rows: auto;
       grid-template-areas:
       "cot1 cot1"
       "cot2 cot2"
       "cot3 cot3"
       "cot4 cot4";
-      padding-left:2rem;
+      padding-left:1rem;
       
   }
   .aboutcontent h2{
@@ -663,7 +670,7 @@ figcaption {
   }
   
   .adobe{
-    width:220px;
+    width:218px;
   }
   
   
@@ -671,7 +678,7 @@ figcaption {
     grid-column: 1;
     grid-area:"cot3";
     grid-column: 1 / span 3;
-    padding-left:0rem;
+    padding-left:1rem;
   }
 
   .general{
@@ -693,6 +700,10 @@ figcaption {
     grid-column: 1 / span 3;
     grid-area:"cot4";
   }
+
+    .certification ul{
+      padding-left:1rem;
+    }
   
   .footer{
     grid-area:footer;
