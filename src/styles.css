@@ -392,7 +392,7 @@ font-size: 1.4rem;
     grid-template-columns: 1fr 1fr 1fr; 
     grid-template-rows: auto 3fr 3fr;
     grid-template-areas:
-    "col1 col2 col3";
+    "item1 item2 item3";
     padding-left:4rem;
     padding-bottom:.1rem;
 }
@@ -412,13 +412,13 @@ font-size: 1.4rem;
   position: relative;
   display: block;
   max-width: 100%;
-  grid-area:col3;
+  grid-area:item3;
   border: 1px solid black;
 }
 
 
 .contactcolumn{
-  grid-area:col1;
+  grid-area:item1;
 }
 .contactcolumn a{
   font-family: inherit;
@@ -441,7 +441,7 @@ padding-bottom:1rem;
 /* Style inputs, select elements and textareas */
 
 .formcontainer{
-  grid-area:col2;
+  grid-area:item2;
 }
 
 input[type=text],
@@ -453,7 +453,7 @@ textarea {
     background-color: rgba(0, 0, 0, 0);
     border: 1px solid var(--headerfont);
     border-radius: 1px;
-    width: 40rem;
+    width: 30vw;
     font-family: inherit;
     color: var(--mainfont);
     font-size: 1.2rem;
@@ -478,9 +478,8 @@ textarea:focus {
 
 textarea {
     font-family: inherit;
-    height: 320px;
-    min-height: 320px;
-    max-width: 100%;
+    height: 200px;
+    min-height: 120px;
     box-sizing: border-box;
     overflow: hidden;
     resize: vertical;
@@ -497,7 +496,7 @@ input[type=submit] {
     border-style: solid;
     border-color: inherit;
     margin-top: 5px;
-    margin-bottom: 3rem;
+    
     padding: 12px 15px 12px 25px;
     transition: all 0.2s ease 0s;
     cursor: pointer;
@@ -816,7 +815,78 @@ figcaption {
     grid-area:"cot4";
   }
  
+  /* contact */
+.contactcontent{
+  grid-area:content;
+  display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "item1 item2"
+                          "item3 item3";
+    padding-left:2rem;
+   
 }
+
+
+#amandeep{
+  object-fit: cover;
+  width:270px;
+  height:270px;
+  grid-area:item2;
+  margin-left:0;
+  margin-right:0;
+  border: 1px solid black;
+  
+}
+
+.contactcolumn{
+ grid-area:item1;
+}
+.contactcolumn h3{
+  font-size:1.5rem;
+  padding-top:1rem;
+}
+
+.contactcolumn li{
+font-size: 1.5rem;
+padding-bottom:1rem;
+}
+
+.formcontainer{
+  grid-area:item3;
+  padding-bottom:1rem;
+}
+
+input[type=text],
+select,
+textarea {
+    padding: 12px;
+    margin-bottom: 4px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid var(--headerfont);
+    border-radius: 1px;
+    
+    width: 90vw;
+    font-family: inherit;
+    color: var(--mainfont);
+    font-size: 1rem;
+    transition: all 0.2s ease 0s;
+    
+}
+
+textarea {
+  font-family: inherit;
+  height: 120px;
+  box-sizing: border-box;
+  overflow: hidden;
+  resize: vertical;
+}
+
+}
+
+
 
 
    @media screen and (max-width: 800px){
