@@ -92,8 +92,7 @@ p, a, ul, li{
                         "sidebar footer footer";
   grid-template-rows:    auto 1fr auto;
   grid-template-columns: 1.5fr 10fr 1fr 1fr;
-  min-height: 100%;
-  row-gap: 35px;
+ min-height: 100%;
   }
 
 
@@ -365,7 +364,7 @@ figcaption {
     "col1 col2"
     "col1 col2";
     padding-left:4rem;
-    padding-bottom:.4rem;
+    padding-bottom:4.7rem;
     
 }
 
@@ -394,7 +393,7 @@ font-size: 1.4rem;
     grid-template-areas:
     "item1 item2 item3";
     padding-left:4rem;
-    padding-bottom:.1rem;
+    padding-bottom:1rem;
 }
 
 #contact {
@@ -518,6 +517,7 @@ input[type=submit]:hover {
     background:var(--footercolor);
     border-top: .2rem solid var(--selectorfont);
     grid-column: 2 / span 4;
+   
     bottom: 0;
     margin-right: -.5em;
     margin-bottom:-3rem;
@@ -537,6 +537,32 @@ input[type=submit]:hover {
   }
 
 /*--------------End of footer------------*/
+
+@media screen and (min-width: 2000px) {
+
+  .grid {
+    display:grid;   
+    grid-template-areas:  "sidebar header header"
+                          "sidebar content content"
+                          "sidebar footer footer";
+    grid-template-rows:    auto 1fr auto;
+    grid-template-columns: 1fr 10fr 1fr 1fr;
+    grid-gap:2rem;
+   min-height: 100%;
+    }
+  
+    .footer{
+      grid-area:footer;
+      
+      grid-column: 1 / span 4;
+      bottom: 0;
+      padding-left:10vw;
+      height: 3rem; 
+      display:flex;
+      flex-shrink: 0;
+     }
+    
+}
 
  @media screen and (max-width: 1500px) {
   .sidebar {
