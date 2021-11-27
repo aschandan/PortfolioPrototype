@@ -37,7 +37,8 @@
   font-weight: 700;
   font-family: 'Eczar', serif;
   font-size: 3rem;
-  margin-bottom: .2rem;
+  margin-bottom: 0;
+  
   }
 
   h2{ 
@@ -184,66 +185,8 @@ p, a, ul, li{
   padding-left:4rem;
 }
 
-/* for about page (page2)*/
-.aboutcontent{
-  grid-area:content;
-  display: grid;
-    grid-gap: 2rem;
-    grid-template-columns: 3fr 2fr 1fr auto; 
-    grid-auto-rows: auto;
-    grid-template-areas:
-    "cot1 cot1 cot1"
-    "cot2 cot2 cot2"
-    "cot3 cot3 cot4";
-    padding-left:4rem;
-    
-}
-.aboutcontent h2{
-  font-size:1.4rem;
-}
 
-.aboutcontent p{
-  font-size: 1.2rem;
-}
-
-.listheader{
-  font-weight: 400;
-  font-family: 'Eczar', serif;
-}
-.aboutlist, .aboutcontent li{
-  font-size:1.2rem;
-  padding-left: 0;
-}
-.aboutme{
-  grid-column: 1 / span 3;
-  grid-area:"cot1";
-}
-
-.education{
-  grid-row:2 / span 2;
-  grid-column: 1 / span 4;
-  grid-area:"cot2";
-}
-
-
-.skills{
-  grid-column: 1;
-  grid-area:"cot3";
-  padding-left:4vw;
-}
-
-
-.certification{
-  grid-column: 2 / span 2;
-  grid-area:"cot4";
-}
-  .certification ul{
-    list-style-type: "→ ";
-  }
-  
-/* end of about page*/
-
-/*start of home page (page 1) */
+/*-----------start of home page (page 1)------------------- */
 .imagecontent{
   grid-area:content;
   display: grid;
@@ -345,7 +288,97 @@ figcaption {
   grid-area: image7;
 }
 
-  /* end of page one content*/
+/* end of page one content*/
+
+  /*-----------------for about page (page2)--------------*/
+
+.aboutcontent{
+  grid-area:content;
+  display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 3fr 2fr 1fr auto; 
+    grid-auto-rows: auto;
+    grid-template-areas:
+    "cot1 cot1 cot1"
+    "cot2 cot2 cot2"
+    "cot3 cot3 cot4";
+    padding-left:4rem;
+    
+}
+.aboutcontent h2{
+  font-size:1.4rem;
+}
+
+.aboutcontent p{
+  font-size: 1.2rem;
+}
+
+.listheader{
+  font-weight: 400;
+  font-family: 'Eczar', serif;
+}
+.aboutlist, .aboutcontent li{
+  font-size:1.2rem;
+  padding-left: 0;
+}
+.aboutme{
+  grid-column: 1 / span 3;
+  grid-area:"cot1";
+}
+
+.education{
+  grid-row:2 / span 2;
+  grid-column: 1 / span 4;
+  grid-area:"cot2";
+}
+
+
+.skills{
+  grid-column: 1;
+  grid-area:"cot3";
+  padding-left:4vw;
+}
+
+
+.certification{
+  grid-column: 2 / span 2;
+  grid-area:"cot4";
+}
+  .certification ul{
+    list-style-type: "→ ";
+  }
+  
+/* end of about page*/
+
+
+ /*-----------------for Work experience page (page3)--------------*/
+
+ .workcontent{
+  grid-area:content;
+  display: grid;
+    grid-gap: 3rem;
+    grid-template-columns: 2fr 2fr; 
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+    "col1 col2"
+    "col1 col2";
+    padding-left:4rem;
+    padding-bottom:1.3rem;
+    
+}
+
+.workcontent p {
+font-size: 1.4rem;
+}
+
+.workcontent h2 {
+  font-size: 1.8rem;
+  }
+
+  .workcontent h3 {
+    font-size: 1.6rem;
+    }
+/*--------------start of footer------------*/
 
   .footer{
     grid-area:footer;
@@ -370,7 +403,7 @@ figcaption {
     padding-left:4rem;
   }
 
-  
+/*--------------End of footer------------*/
 
  @media screen and (max-width: 1500px) {
   .sidebar {
