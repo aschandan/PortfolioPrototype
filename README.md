@@ -1,3 +1,3 @@
 # PortfolioPrototype
 WEB.210 Assignment
-Project created for Wake Technical Community College and myself. This will be adapted and used for personal use cases after this class ends.
+Project created originally for Wake Technical Community College and myself. This website is now adopted by me, and will be mantained as time goes on. 
