@@ -197,6 +197,7 @@ p, a, ul, li{
     "image1 image1 image4 image5"
     "image2 image3 image6 image7";
     padding-left:4rem;
+    padding-bottom:2rem;
 }
 
 /*end of grid*/
@@ -303,6 +304,7 @@ figcaption {
     "cot2 cot2 cot2"
     "cot3 cot3 cot4";
     padding-left:4rem;
+    padding-bottom:1rem;
     
 }
 .aboutcontent h2{
