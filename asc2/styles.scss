@@ -1,0 +1,483 @@
+/* variables for colors*/
+:root {
+  --headerfont: #3c2d38;
+  --mainfont: #1f1f1f;
+  --bgcolor: #FBEACC;
+  --sidenav: #dab46d;
+  --selectioncolor: #f7f0e2;
+  --selectioncolorbar: #debc7d;
+  --selectorfont: #251c23;
+  --shadecolor: #e3cb9b;
+  --shadecolor2: #e7d3aa;
+  --shadecolor3: #e1c186;
+  --footercolor: #3C2D41;
+  --heading-font-family: 'Sentient', serif;
+  --body-font-family:'Work Sans', sans-serif;
+}
+
+/* preparing / readying body */
+* {
+  box-sizing: border-box;
+  font-family: 'Sentient', serif;
+  font-family: 'Work Sans', sans-serif;
+  overflow:visible;
+}
+  
+  html, body {
+  background-color: var(--bgcolor);
+  width: 100%;
+  height: 100%;
+  margin-left:-.01rem;
+  margin-top:-.01rem;
+  }
+/* end of body */
+
+/*setting values for headers, lists, etc. */
+
+  h1, h2, h3, h4{
+  color:var(--headerfont);
+  }
+
+  h1{
+  font-weight: 700;
+  font-family: var(--heading-font-family);
+  font-size: 3rem;
+  }
+
+  h2{ 
+  font-weight:500;
+  font-size:1.5rem;
+  margin-top: .2rem;
+
+  font-family: var(--heading-font-family);
+  }
+
+
+h3, h4 {
+font-weight: 400;
+font-family: var(--heading-font-family);
+}
+
+h3 {
+  font-size:1.4rem;
+  }
+
+p{
+  font-family: var(--body-font-family);
+  color: var(--headerfont);
+
+  }
+
+  
+ul, li, a{
+  color: var(--bgcolor);
+  font-family: var(--heading-font-family);
+  font-size:1.2rem;
+}
+
+/* end of font values */
+
+
+
+/*creation of grid*/
+
+.wrapper{
+  display:grid;   
+  grid-template-columns: repeat(1, 1fr);
+  grid-auto-rows: .2fr 2fr .4fr;
+  width: max-content;
+  margin: auto;
+  grid-template-areas:
+  "topbar"
+  "main"
+  "main"
+  "foot";
+  min-height: 100vh;
+  }
+
+  
+
+
+  /*topbar values*/
+
+.topbar {
+  grid-area: topbar;
+  background-color: var(--footercolor);
+  width: 100vw;
+  height:5rem;
+  padding-top:1rem;
+}
+
+.topbar ul{
+  padding-left:1.5rem;
+  list-style-type: none; 
+}
+
+.topbar a{
+  padding:1rem;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.topbar li{
+
+  display: inline-block;
+  text-decoration: none;
+  text-align: left;
+  outline: none;
+  
+  
+}
+
+.topbar a:hover {
+  transition: ease 0.4s;
+}
+
+.topbar a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 1px;
+  margin-top: 2px;
+  transition: 0 0.4s, var(--background-color) 0.4s;
+  margin-left:1.1rem;
+  position: absolute;
+  background-color: var(--bgcolor);
+}
+
+.topbar a:hover::after {
+  background-color: var(--bgcolor);  
+  width: 2%;
+  outline: none;
+  transition: width 0.4s;
+}
+
+.selected {
+  content: '';
+  left: 0;
+  outline: 1px solid;
+  /*background-color: var(--selectorfont);*/
+  
+
+}
+
+
+
+/* ---- end of topbar ---- */
+
+
+/*start of header and grid content*/
+
+
+
+/*-----------start of home page (page 1)------------------- */
+.startcontent div{
+  padding-top:1rem;
+}
+.content{
+  grid-area:main;
+  padding-top:1rem;
+  display: grid;
+    grid-gap: .1rem;
+    grid-template-columns: 1.5fr 1fr;
+    grid-auto-rows: auto;
+    grid-template-areas:
+    "col1 col2"
+    "col1 col2"
+    "col1 col2"
+    "col1 col2";
+    padding-left:4rem;
+    padding-top:2rem;
+}
+
+/*end of grid*/
+
+/*page one content*/
+
+
+.header h1{
+font-size:3rem;
+padding:.3rem;
+position: relative;
+overflow: hidden;
+text-align: left;
+}
+
+/* adds an hr line after 'hello there'
+
+#hello:before{
+    display: inline-block;
+    content: "";
+    height: 4px;
+    background: var(--mainfont);
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    margin-top: -1px;
+    margin-left: 17vw;
+  }
+*/
+
+#name{
+  
+  font-family:var(--body-font-family)
+}
+
+.blurb{
+  max-width: 55rem;
+  font-size:3.3vmin;
+  padding-bottom:1rem;
+}
+
+  #mottoblurb{
+    font-style: italic;
+    font-size:3.3vmin;
+  }
+
+.photowrapper {
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.photo{
+  position: relative;
+  max-width:550px;
+}
+
+#blob{
+  position:absolute;
+  max-width:140px;
+  z-index:0;
+}
+
+#arrow{
+  font-family: 'Work Sans';
+  padding-top:1rem;
+  font-weight: 900;
+  font-size: 2rem;
+  }
+  
+
+
+/*-------------end of page one--------*/
+
+/*-----------------for about page (page2)--------------*/
+
+.aboutcontent{
+  grid-area:content;
+  display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+    grid-template-areas:
+    "cot1 cot1 cot1"
+    "cot2 cot2 cot2"
+    "cot3 cot3 cot4";
+    padding-left:4rem;
+    padding-bottom:1rem;
+    
+}
+.aboutcontent h2{
+  font-size:1.4rem;
+}
+
+.aboutcontent p{
+  font-size: 1.2rem;
+}
+
+.listheader{
+  font-weight: 400;
+  font-family: 'Eczar', serif;
+}
+.aboutlist, .aboutcontent li{
+  font-size:1.2rem;
+  padding-left: 0;
+}
+.aboutme{
+  grid-column: 1 / span 3;
+  grid-area:"cot1";
+}
+
+.education{
+  grid-row:2 / span 2;
+  grid-column: 1 / span 4;
+  grid-area:"cot2";
+}
+
+
+.skills{
+  grid-column: 1;
+  grid-area:"cot3";
+  padding-left:4vw;
+}
+
+
+.certification{
+  grid-column: 2 / span 2;
+  grid-area:"cot4";
+}
+  .certification ul{
+    list-style-type: "→ ";
+  }
+  
+/* end of about page*/
+
+
+
+/*--------------start of footer------------*/
+
+.social ul, .social li, .social a{
+  color: var(--footercolor);
+  font-family: var(--heading-font-family);
+}
+  .footer{
+  overflow:hidden;
+    grid-area:foot;
+    outline: none;
+    border-top: .2rem solid var(--selectorfont);
+   }
+  
+  .footertext, .social{
+  padding-left:1rem;
+  display: inline-block;
+  color: var(--footercolor);
+  }
+
+  .social{
+    padding-left:2rem;
+  }
+
+  #smile{
+    padding-left:2rem;
+    display: inline-block;
+    font-size:1.5rem;
+    color: var(--footercolor);
+  }
+  
+/*--------------End of footer------------*/
+
+
+@media screen and (max-width: 1500px) {
+
+  .content{
+    grid-area:main;
+    display: grid;
+    grid-gap:1rem;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "col1 col2";
+    padding-left:2rem;
+    
+  }
+}
+
+
+@media screen and (max-width: 1050px) {
+
+  .wrapper{
+    display:grid;   
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: .3fr 2fr 1fr;
+    width: none;
+    margin: auto;
+    grid-template-areas:
+    "nav"
+    "main"
+    "main"
+    "foot";
+    }
+
+    .content{
+      grid-area:main;
+      display: grid;
+      grid-gap:1rem;
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+      grid-template-areas:
+      "col1"
+      "col2";
+      padding-left:1rem;
+      
+    }
+  
+    .col1{
+      padding-left:1rem;
+      padding-right:1rem;
+      order:2;
+    }
+
+    .photo{
+      max-width: 550px;
+    
+    }
+
+
+   h1{
+    font-size: 5vmin;
+    width:90vw;
+    }
+  
+    h2.blurb{ 
+    
+    margin-top: .2rem;
+    width:90vw;
+    }
+  
+    h2#mottoblurb{
+      font-size:4vmin;
+      width:90vw;
+    }
+  h3 {
+    font-size:2vh;
+    }
+  
+  p{
+    font-size:.5rem;
+    }
+  
+    
+  ul, li, a{
+    font-size:.9rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+ 
+.header h1{
+  font-size:2rem;
+  padding:0rem;
+  text-align: left;
+  }
+  
+  /* removes an hr line after 'hello there'*/
+  
+  #hello:before{
+      visibility: hidden;
+    }
+    
+   .footer{
+    grid-area:foot;
+    outline: none;
+    width:100vw;
+   }
+   
+   .footertext, .social{
+     padding-left:0rem;
+   }
+
+   ul.social, li.social, a.social{
+    font-size:5vmin;
+   
+  }
+ 
+
+  #smile{
+    padding-left:0rem;
+    display: inline-flex;
+    font-size: 2rem;
+    color: var(--footercolor);
+  }
+
+}
+
